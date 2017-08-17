@@ -14,8 +14,7 @@ ADD inventory /opt/inventory
 RUN pushd /opt/ && \
           tar -xvf /opt/ansible-tower-setup-$version.tar.gz && \
           cd ansible-tower-setup-* && \
-          mv ../inventory . && \
-          ./setup.sh          
+          mv ../inventory .
 
           
   
