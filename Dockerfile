@@ -13,9 +13,9 @@ ADD inventory /opt
 
 RUN pushd /opt/ && \
           tar -xvf /opt/ansible-tower-setup-$version.tar.gz && \
-          cd /opt/ansible-tower-setup-*
-          mv ../inventory .
-          ./setup.sh
+          cd /opt/ansible-tower-setup-* && \
+          mv ../inventory . && \
+          ./setup.sh && \
           popd
 ENTRYPOINT ["/usr/bin/ansible-tower-service", "start"]
 
